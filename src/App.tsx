@@ -1,7 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Button from './components/Button'  
+import Button from './components/Button'
+
+const ButtonProps = {
+  data:{
+    elementId:"abfa143"
+  }
+}
 
 function App() {
   return (
@@ -17,7 +23,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button type='primary'>这是Button</Button>
+          <Button data={ButtonProps.data} type='primary'>这是Button</Button>
         </a>
       </header>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
+import BaseElement from "./BaseElement";
 
 const ButtonTypes = ["default", "primary", "ghost", "dashed", "link", "text"]
 type ButtonType = typeof ButtonTypes[number]
@@ -10,13 +11,20 @@ interface ButtonProps {
     onClick?: React.MouseEventHandler<HTMLElement>,
 }
 
+class CustomButton extends BaseElement<ButtonProps, any>{
 
-const CustomButton: React.FC<ButtonProps> = (props) => {
-    const { children, type, onClick } = props
-    return (
-        // @ts-ignore
-        <Button type={type} onClick={onClick}>{props.children}</Button>
-    )
+    state = {
+        type:"primary"
+    }
+
+    render() {
+        const { children, type, onClick } = this.props
+        return (
+          // @ts-ignore
+          <Button type={this.state.type} onClick={onClick}>{children}</Button>
+        )
+
+    }
 }
 
 export default CustomButton

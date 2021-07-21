@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+            name="description"
+            content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -25,22 +25,113 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-  </head>
-  <body>
-    <script>
-      window.document.pageContext = {}
-    </script>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+</head>
+<body>
+<div id="page"></div>
+<script>
+  window.pageData = {
+    compress: false,
+    i18n: 'zh_CN',
+    data: {
+      $class: 'Page',
+      appId: 'ff80808172255ee601722566597c0004',
+      cssScript: {
+        $class: 'CssScript',
+        breakRabbet: true,
+        displayName: 'CssScript',
+        elementId: 'CssScript_82befcaf',
+        extraToolTip: false,
+        hidden: false,
+        id: 'CssScript_82befcaf',
+        isShowLabel: true,
+        labelBreakFlag: false,
+        name: 'CssScript_82befcaf',
+        parentId: '402880ec742dc38001742ded865f0009',
+        required: false,
+        value: '.HiTree {\r\n  overflow: auto;\r\n}\r\n.ant-page-header-heading {\r\n  margin-top: -60px;\r\n}\r\n\r\n.HiHeader {\r\n  margin-top: -20px;\r\n  padding: 6px 0 !important;\r\n  background: unset !important;\r\n}\r\n\r\n.ant-page-header.ant-page-header-ghost {\r\n  padding: 16px 24px;\r\n  margin-bottom: -30px;\r\n}\r\n\r\n.ant-breadcrumb {\r\n  margin-left: 0 !important;\r\n}\r\n\r\nspan.ant-page-header-heading-extra {\r\n  position: relative;\r\n  right: -32px;\r\n}\r\n\r\n',
+        viewMode: false
+      },
+      displayName: '服务编排列表页',
+      elementId: 'service_orchestration_list_page',
+      extendsPage: 'ServiceCenter/BaseServiceCenterPage',
+      hidden: false,
+      id: '402880ec742dc38001742ded865f0009',
+      inheritable: false,
+      layoutType: 'DEFAULT',
+      navigation: {
+        $class: 'Navigation',
+        elementId: 'businessServiceNavigation',
+        items: [{
+          $class: 'Menu',
+          displayName: 'Menu',
+          elementId: 'Menu_b2e1773d',
+          hidden: false,
+          id: 'Menu_b2e1773d',
+          index: 100,
+          title: '工作台',
+          url: '/page/render/workView/DevOpsRoleView',
+          viewMode: false
+        }, {
+          $class: 'Menu',
+          displayName: 'Menu',
+          elementId: 'Menu_4ca991bf',
+          hidden: false,
+          id: 'Menu_4ca991bf',
+          index: 100,
+          title: '需求管理',
+          url: '/mgmt/requirement/center',
+          viewMode: false
+        }, {
+          $class: 'Menu',
+          displayName: 'Menu',
+          elementId: 'Menu_0d11787a',
+          hidden: false,
+          id: 'Menu_0d11787a',
+          index: 100,
+          title: '业务能力',
+          url: '/page/render/id/4028ab59722682e70172268e214f0000',
+          viewMode: false
+        }, {
+          $class: 'Menu',
+          displayName: 'Menu',
+          elementId: 'Menu_3a3714fa',
+          hidden: false,
+          id: 'Menu_3a3714fa',
+          index: 100,
+          title: '业务服务',
+          url: '/designer/4eb17add909f3315a53f6b30e63dea9e/list/1/10',
+          viewMode: false
+        }, {
+          $class: 'Menu',
+          displayName: 'Menu',
+          elementId: 'Menu_74a87555',
+          hidden: false,
+          id: 'Menu_74a87555',
+          index: 100,
+          title: '流量回放',
+          url: '/page/render/id/2c92c66175ad4f550175b6a657ba010c',
+          viewMode: false
+        }],
+      },
+      content: {
+        $class: 'Button',
+        text: 'Button',
+        type: 'primary'
+      }
+    }
+  };
+</script>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<!--
+  This HTML file is a template.
+  If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  You can add webfonts, meta tags, or analytics to this file.
+  The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  To begin the development, run `npm start` or `yarn start`.
+  To create a production bundle, use `npm run build` or `yarn build`.
+-->
+</body>
 </html>

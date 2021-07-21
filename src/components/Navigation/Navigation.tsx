@@ -10,7 +10,7 @@ class Navigation extends BaseElement<NavigationProps, any> {
 
   buildMenuItem(items: NavigationItem[] = []) {
     return items.map(menuItem => (
-      <MenuItem key={menuItem.key}>
+      <MenuItem key={menuItem.elementId}>
         {menuItem.title}
       </MenuItem>
     ))
@@ -19,7 +19,7 @@ class Navigation extends BaseElement<NavigationProps, any> {
   render() {
     const { items } = this.props.data;
     return (
-      <Menu>
+      <Menu theme="dark" mode="inline">
         {this.buildMenuItem(items)}
       </Menu>
     );

@@ -4,7 +4,7 @@ export { default } from './Navigation'
 
 
 export interface NavigationItem {
-  key: string,
+  elementId: string,
   title: string,
   icon: React.ReactNode
 }

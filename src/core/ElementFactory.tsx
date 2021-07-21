@@ -11,14 +11,13 @@ export default (() => {
       components[name] = comp
     },
     createElement(data: any): React.ReactElement{
-      debugger
-      const Comp = components[data.$class]
+        const Comp = data ? components[data.$class] : <></>
 
-      if (Comp) {
-        // @ts-ignore
-        return <Comp data={data}/>
-      }
-      console.log(`${data.$class} not found`)
+        if (Comp) {
+          // @ts-ignore
+          return <Comp data={data}/>
+        }
+        console.log(`${data.$class} not found`)
       return <></>;
     }
   }

@@ -1,17 +1,14 @@
-import { Component } from 'react';
+import React from 'react';
+import { BaseComponent } from ".";
 
 interface Props {
-  data: {
-    elementId: string,
-    [prop: string]: any
-  }
+  data: BaseComponent
 }
 
-interface State {
-}
+interface State {}
 
-abstract class BaseElement<T, U> extends Component<Props & T, State & U> {
-  elementId: any;
+abstract class BaseElement<T, U> extends React.Component<Props & T, State & U> {
+  elementId: string;
 
   constructor(props: Props & T) {
     super(props);

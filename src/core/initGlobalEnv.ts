@@ -8,6 +8,7 @@ export const initEnv = () => {
 
   ElementFactory.register('Page',components.Page)
   ElementFactory.register('Navigation',components.Navigation)
+  ElementFactory.register('Button',components.Button)
 }
 
 export const start = async () =>{

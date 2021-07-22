@@ -6,7 +6,7 @@ export { default } from './Navigation'
 export interface NavigationItem {
   elementId: string,
   title: string,
-  icon: React.ReactNode
+  icon: string
 }
 
 export type NavigationData = {

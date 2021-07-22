@@ -69,6 +69,7 @@
           id: 'Menu_b2e1773d',
           index: 100,
           title: '工作台',
+          icon: 'HomeOutlined',
           url: '/page/render/workView/DevOpsRoleView',
           viewMode: false
         }, {
@@ -79,6 +80,7 @@
           id: 'Menu_4ca991bf',
           index: 100,
           title: '需求管理',
+          icon: 'HomeOutlined',
           url: '/mgmt/requirement/center',
           viewMode: false
         }, {
@@ -89,6 +91,7 @@
           id: 'Menu_0d11787a',
           index: 100,
           title: '业务能力',
+          icon: 'HomeOutlined',
           url: '/page/render/id/4028ab59722682e70172268e214f0000',
           viewMode: false
         }, {
@@ -98,6 +101,7 @@
           hidden: false,
           id: 'Menu_3a3714fa',
           index: 100,
+          icon: 'HomeOutlined',
           title: '业务服务',
           url: '/designer/4eb17add909f3315a53f6b30e63dea9e/list/1/10',
           viewMode: false
@@ -108,16 +112,29 @@
           hidden: false,
           id: 'Menu_74a87555',
           index: 100,
+          icon: 'HomeOutlined',
           title: '流量回放',
           url: '/page/render/id/2c92c66175ad4f550175b6a657ba010c',
           viewMode: false
         }],
       },
-      content: {
-        $class: 'Button',
-        text: 'Button',
-        type: 'primary'
-      }
+      contents: [
+        {
+          $class: 'Button',
+          text: 'Button',
+          type: 'primary'
+        },
+        {
+          $class: 'Form',
+          inputs: [
+            {
+              $class: 'Input',
+              value: '',
+              onChangeScript: (v) => console.log(v)
+            }
+          ]
+        }
+      ]
     }
   };
 </script>

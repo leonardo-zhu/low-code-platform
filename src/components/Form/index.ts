@@ -11,3 +11,5 @@ type FormData = {
 export interface FormProps {
   data: FormData
 }
+
+export { default } from './Form'

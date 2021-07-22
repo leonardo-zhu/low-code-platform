@@ -3,6 +3,7 @@ import BaseElement from "../BaseElement";
 import { FormProps } from ".";
 import { Form } from "antd";
 import { FormInstance } from "antd/lib/form";
+import ElementFactory from "../../core/ElementFactory";
 
 const { Item: FormItem } = Form
 
@@ -13,9 +14,11 @@ class CustomForm extends BaseElement<FormProps, any> {
   buildFormItems() {
     const { inputs = [] } = this.props.data
 
-    return inputs.map(input => {
-
-    })
+    return inputs.map(input => (
+      <FormItem name={input.name}>
+        {ElementFactory.createElement(input)}
+      </FormItem>
+    ))
   }
 
   getFieldsValue = () => this.formRef.current?.getFieldsValue()

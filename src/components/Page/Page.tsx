@@ -10,9 +10,9 @@ const { Header, Content, Footer, Sider } = Layout;
 class Page extends BaseElement<PageProps, any> {
 
   renderContent() {
-    const { content } = this.props.data;
+    const { contents } = this.props.data;
     debugger
-    return ElementFactory.createElement(content)
+    return contents.map(content => ElementFactory.createElement(content))
   }
 
   render() {

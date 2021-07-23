@@ -22,7 +22,17 @@ class Page extends BaseElement<PageProps, any> {
         <SiderComp>
           <Navigation data={navigation}/>
         </SiderComp>
-        {this.renderContent()}
+        <Layout className="site-layout"
+                style={{ minHeight: "100vh", marginLeft: 200, transition: "all 0.2s" }}>
+          <Header className="site-layout-background" style={{ height: 48, padding: 0 }}/>
+          <Content style={{ margin: '12px 16px 0', overflow: 'initial' }}>
+            <div className="site-layout-background" style={{ height: "100%" }}>
+              {this.renderContent()}
+            </div>
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>Low Code Platform ©2021 Created by XiaoLong.ZXL</Footer>
+        </Layout>
+
       </Layout>
     );
   }

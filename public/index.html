@@ -34,106 +34,71 @@
     i18n: 'zh_CN',
     data: {
       $class: 'Page',
-      appId: 'ff80808172255ee601722566597c0004',
+      elementId: 'page',
       cssScript: {
         $class: 'CssScript',
-        breakRabbet: true,
-        displayName: 'CssScript',
         elementId: 'CssScript_82befcaf',
-        extraToolTip: false,
-        hidden: false,
-        id: 'CssScript_82befcaf',
-        isShowLabel: true,
-        labelBreakFlag: false,
-        name: 'CssScript_82befcaf',
-        parentId: '402880ec742dc38001742ded865f0009',
         required: false,
         value: '.HiTree {\r\n  overflow: auto;\r\n}\r\n.ant-page-header-heading {\r\n  margin-top: -60px;\r\n}\r\n\r\n.HiHeader {\r\n  margin-top: -20px;\r\n  padding: 6px 0 !important;\r\n  background: unset !important;\r\n}\r\n\r\n.ant-page-header.ant-page-header-ghost {\r\n  padding: 16px 24px;\r\n  margin-bottom: -30px;\r\n}\r\n\r\n.ant-breadcrumb {\r\n  margin-left: 0 !important;\r\n}\r\n\r\nspan.ant-page-header-heading-extra {\r\n  position: relative;\r\n  right: -32px;\r\n}\r\n\r\n',
-        viewMode: false
       },
-      displayName: '服务编排列表页',
-      elementId: 'service_orchestration_list_page',
-      extendsPage: 'ServiceCenter/BaseServiceCenterPage',
-      hidden: false,
-      id: '402880ec742dc38001742ded865f0009',
-      inheritable: false,
       layoutType: 'DEFAULT',
       navigation: {
         $class: 'Navigation',
-        elementId: 'businessServiceNavigation',
+        elementId: 'Navigation',
         items: [{
           $class: 'Menu',
-          displayName: 'Menu',
           elementId: 'Menu_b2e1773d',
-          hidden: false,
-          id: 'Menu_b2e1773d',
-          index: 100,
-          title: '工作台',
+          title: 'MenuItem1',
           icon: 'HomeOutlined',
           url: '/page/render/workView/DevOpsRoleView',
-          viewMode: false
         }, {
           $class: 'Menu',
-          displayName: 'Menu',
           elementId: 'Menu_4ca991bf',
-          hidden: false,
-          id: 'Menu_4ca991bf',
-          index: 100,
-          title: '需求管理',
+          title: 'MenuItem2',
           icon: 'HomeOutlined',
           url: '/mgmt/requirement/center',
-          viewMode: false
         }, {
           $class: 'Menu',
-          displayName: 'Menu',
           elementId: 'Menu_0d11787a',
-          hidden: false,
-          id: 'Menu_0d11787a',
-          index: 100,
-          title: '业务能力',
+          title: 'MenuItem3',
           icon: 'HomeOutlined',
           url: '/page/render/id/4028ab59722682e70172268e214f0000',
-          viewMode: false
         }, {
           $class: 'Menu',
-          displayName: 'Menu',
           elementId: 'Menu_3a3714fa',
-          hidden: false,
-          id: 'Menu_3a3714fa',
-          index: 100,
           icon: 'HomeOutlined',
-          title: '业务服务',
+          title: 'MenuItem4',
           url: '/designer/4eb17add909f3315a53f6b30e63dea9e/list/1/10',
-          viewMode: false
         }, {
           $class: 'Menu',
-          displayName: 'Menu',
           elementId: 'Menu_74a87555',
-          hidden: false,
-          id: 'Menu_74a87555',
-          index: 100,
           icon: 'HomeOutlined',
-          title: '流量回放',
+          title: 'MenuItem5',
           url: '/page/render/id/2c92c66175ad4f550175b6a657ba010c',
-          viewMode: false
         }],
       },
       contents: [
         {
-          $class: 'Button',
-          text: 'Button',
-          type: 'primary'
-        },
-        {
           $class: 'Form',
+          elementId: "Form",
           inputs: [
             {
               $class: 'Input',
+              elementId: "Input",
               value: '',
               onChangeScript: (v) => console.log(v)
             }
           ]
-        }
+        },
+        {
+          $class: 'Button',
+          elementId: "Button",
+          text: 'Button',
+          type: 'primary',
+          onClickScript: () => {
+            alert(window.document.pageContext["Input"].state.value)
+          }
+        },
       ]
     }
   };
